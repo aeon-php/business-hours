@@ -6,7 +6,7 @@ declare(strict_types=1);
 namespace Aeon\Calendar\Tests\Unit\Calendar\Gregorian\BusinessHours\BusinessHours;
 
 use Aeon\Calendar\Gregorian\BusinessHours\BusinessDays;
-use Aeon\Calendar\Gregorian\BusinessHours\WorkingHours;
+use Aeon\Calendar\Gregorian\BusinessHours\WorkingHours\LinearWorkingHours;
 use Aeon\Calendar\Gregorian\DateTime;
 use Aeon\Calendar\Gregorian\Time;
 use PHPUnit\Framework\TestCase;
@@ -16,7 +16,7 @@ final class BusinessDaysTest extends TestCase
     public function test_whole_week_business_days() : void
     {
         $businessDays = BusinessDays::wholeWeek(
-            new WorkingHours(Time::fromString('8am'), Time::fromString('6pm'))
+            new LinearWorkingHours(Time::fromString('8am'), Time::fromString('6pm'))
         );
 
         $this->assertTrue($businessDays->isOpen(DateTime::fromString('2020-01-06 10am')));
