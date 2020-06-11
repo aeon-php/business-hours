@@ -3,6 +3,8 @@
     "type": "library",
     "description": "Abstraction allowing to define and check against business hours",
     "keywords": ["calendar", "immutable", "holidays", "business hours"],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "php": ">=7.4.2",
         "ext-json": "*",
@@ -21,16 +23,6 @@
         "google/apiclient": "^2.0",
         "aeon-php/calendar-holidays": "dev-master"
     },
-    "repositories": [
-        {
-            "type": "git",
-            "url": "git@github.com:aeon-php/calendar.git"
-        },
-        {
-            "type": "git",
-            "url": "git@github.com:aeon-php/calendar-holidays.git"
-        }
-    ],
     "license": "MIT",
     "autoload": {
         "psr-4": {
@@ -62,5 +54,10 @@
             "php-cs-fixer fix --dry-run"
         ],
         "cs:php:fix": "php-cs-fixer fix"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
     }
 }
