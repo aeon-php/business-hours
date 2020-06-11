@@ -4,15 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ef8614e9218f208226433700127565ca",
+    "content-hash": "b4d04f9fad888d1366b44519f3d0503f",
     "packages": [
         {
             "name": "aeon-php/calendar",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "git@github.com:aeon-php/calendar.git",
+                "url": "https://github.com/aeon-php/calendar.git",
                 "reference": "fb843d37e4cd67d63123fca89d37678714ab8aba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aeon-php/calendar/zipball/fb843d37e4cd67d63123fca89d37678714ab8aba",
+                "reference": "fb843d37e4cd67d63123fca89d37678714ab8aba",
+                "shasum": ""
             },
             "require": {
                 "php": ">=7.4.2",
@@ -41,32 +47,7 @@
                     ]
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Aeon\\Calendar\\Tests\\": "tests/Aeon/Calendar/Tests/"
-                }
-            },
-            "scripts": {
-                "build": [
-                    "@static:analyze",
-                    "@test",
-                    "@test:mutation"
-                ],
-                "test": [
-                    "phpunit"
-                ],
-                "test:mutation": [
-                    "infection -vvv --test-framework-options='--testsuite=unit' --only-covered --log-verbosity=default --min-covered-msi=74 --threads=2"
-                ],
-                "static:analyze": [
-                    "psalm --output-format=compact",
-                    "phpstan analyze -c phpstan.neon",
-                    "php-cs-fixer fix --dry-run"
-                ],
-                "cs:php:fix": [
-                    "php-cs-fixer fix"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6016,12 +5997,12 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "aeon-php/calendar": 20,
         "aeon-php/calendar-holidays": 20
     },
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": ">=7.4.2",
