@@ -6,7 +6,7 @@ namespace Aeon\Calendar\Tests\Unit\Calendar\Gregorian\BusinessHours;
 
 use Aeon\Calendar\Gregorian\BusinessHours\WorkingHours;
 use Aeon\Calendar\Gregorian\Time;
-use Monolog\Test\TestCase;
+use PHPUnit\Framework\TestCase;
 
 final class WorkingHoursTest extends TestCase
 {
