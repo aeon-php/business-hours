@@ -31,7 +31,7 @@ final class CustomBusinessDay implements BusinessDay
 
     public function isOpen(DateTime $dateTime) : bool
     {
-        return $this->is($dateTime->day()) && $this->workingHours()->covers($dateTime);
+        return $this->is($dateTime->day()) && $this->workingHours()->isOpen($dateTime->time());
     }
 
     public function workingHours() : WorkingHours

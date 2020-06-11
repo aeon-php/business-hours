@@ -10,7 +10,7 @@ use Aeon\Calendar\Gregorian\BusinessHours\BusinssDay\CustomBusinessDay;
 use Aeon\Calendar\Gregorian\BusinessHours\NonBusinessDay\Holidays;
 use Aeon\Calendar\Gregorian\BusinessHours\NonBusinessDay\NonWorkingPeriod;
 use Aeon\Calendar\Gregorian\BusinessHours\NonBusinessDays;
-use Aeon\Calendar\Gregorian\BusinessHours\WorkingHours;
+use Aeon\Calendar\Gregorian\BusinessHours\WorkingHours\LinearWorkingHours;
 use Aeon\Calendar\Gregorian\DateTime;
 use Aeon\Calendar\Gregorian\Day;
 use Aeon\Calendar\Gregorian\Exception\BusinessDayException;
@@ -27,10 +27,10 @@ final class BusinessHoursTest extends TestCase
 
         $businessDays = new BusinessHours(
             $businessDays = BusinessDays::mondayFriday(
-                new WorkingHours(Time::fromString('8 am'), Time::fromString('6 pm'))
+                new LinearWorkingHours(Time::fromString('8 am'), Time::fromString('6 pm'))
             ),
             $customBusinessDays = new BusinessDays(
-                new CustomBusinessDay(Day::fromString('2020-01-03'), new WorkingHours(Time::fromString('8 am'), Time::fromString('6 pm')))
+                new CustomBusinessDay(Day::fromString('2020-01-03'), new LinearWorkingHours(Time::fromString('8 am'), Time::fromString('6 pm')))
             ),
             $nonBusinessDays = new NonBusinessDays(
                 new Holidays($regionalHolidays),
@@ -53,7 +53,7 @@ final class BusinessHoursTest extends TestCase
     {
         $businessDays = new BusinessHours(
             $businessDays = BusinessDays::mondayFriday(
-                new WorkingHours(Time::fromString('8 am'), Time::fromString('6 pm'))
+                new LinearWorkingHours(Time::fromString('8 am'), Time::fromString('6 pm'))
             ),
             BusinessDays::none(),
             NonBusinessDays::none(),
@@ -70,12 +70,12 @@ final class BusinessHoursTest extends TestCase
     {
         $businessDays = new BusinessHours(
             $businessDays = BusinessDays::mondayFriday(
-                new WorkingHours(Time::fromString('8 am'), Time::fromString('6 pm'))
+                new LinearWorkingHours(Time::fromString('8 am'), Time::fromString('6 pm'))
             ),
             new BusinessDays(
                 new CustomBusinessDay(
                     Day::fromString('2020-01-02'),
-                    new WorkingHours(Time::fromString('6 am'), Time::fromString('8 pm'))
+                    new LinearWorkingHours(Time::fromString('6 am'), Time::fromString('8 pm'))
                 )
             ),
             new NonBusinessDays(
@@ -96,7 +96,7 @@ final class BusinessHoursTest extends TestCase
     {
         $businessDays = new BusinessHours(
             $businessDays = BusinessDays::mondayFriday(
-                new WorkingHours(Time::fromString('8 am'), Time::fromString('6 pm'))
+                new LinearWorkingHours(Time::fromString('8 am'), Time::fromString('6 pm'))
             ),
             BusinessDays::none(),
             new NonBusinessDays(
@@ -113,7 +113,7 @@ final class BusinessHoursTest extends TestCase
     {
         $businessDays = new BusinessHours(
             $businessDays = BusinessDays::mondayFriday(
-                new WorkingHours(Time::fromString('8 am'), Time::fromString('6 pm'))
+                new LinearWorkingHours(Time::fromString('8 am'), Time::fromString('6 pm'))
             ),
             BusinessDays::none(),
             NonBusinessDays::none(),
@@ -129,7 +129,7 @@ final class BusinessHoursTest extends TestCase
     {
         $businessDays = new BusinessHours(
             $businessDays = BusinessDays::mondayFriday(
-                new WorkingHours(Time::fromString('8 am'), Time::fromString('6 pm'))
+                new LinearWorkingHours(Time::fromString('8 am'), Time::fromString('6 pm'))
             ),
             BusinessDays::none(),
             new NonBusinessDays(

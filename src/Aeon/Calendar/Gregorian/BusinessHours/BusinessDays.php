@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Aeon\Calendar\Gregorian\BusinessHours;
 
+use Aeon\Calendar\Gregorian\BusinessHours\WorkingHours\LinearWorkingHours;
 use Aeon\Calendar\Gregorian\DateTime;
 use Aeon\Calendar\Gregorian\Day;
 use Aeon\Calendar\Gregorian\Exception\BusinessDayException;
@@ -41,7 +42,7 @@ final class BusinessDays
         );
     }
 
-    public static function mondayFriday(WorkingHours $workingHours) : self
+    public static function mondayFriday(LinearWorkingHours $workingHours) : self
     {
         return new self(
             new RegularBusinessDay(Day\WeekDay::monday(), $workingHours),

@@ -30,7 +30,7 @@ final class RegularBusinessDay implements BusinessDay
 
     public function isOpen(DateTime $dateTime) : bool
     {
-        return $this->workingHours->covers($dateTime);
+        return $this->workingHours->isOpen($dateTime->time());
     }
 
     public function workingHours() : WorkingHours
