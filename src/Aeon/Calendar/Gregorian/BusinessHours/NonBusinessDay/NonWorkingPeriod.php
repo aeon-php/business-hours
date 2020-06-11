@@ -6,7 +6,6 @@ namespace Aeon\Calendar\Gregorian\BusinessHours\NonBusinessDay;
 
 use Aeon\Calendar\Gregorian\BusinessHours\NonBusinessDay;
 use Aeon\Calendar\Gregorian\Day;
-use Aeon\Calendar\Gregorian\TimeInterval;
 use Aeon\Calendar\Gregorian\TimePeriod;
 use Aeon\Calendar\TimeUnit;
 
@@ -26,8 +25,8 @@ final class NonWorkingPeriod implements NonBusinessDay
     {
         $days = $this->timePeriod
             ->iterate(TimeUnit::day())
-            ->filter(function (TimeInterval $interval) use ($day) : bool {
-                return $interval->startDateTime()->day()->equals($day);
+            ->filter(function (TimePeriod $timePeriod) use ($day) : bool {
+                return $timePeriod->start()->day()->equals($day);
             });
 
         return (bool) \count($days);
