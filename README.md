@@ -19,6 +19,10 @@ define exceptions and custom working days.
 Business Hours class takes 3 parameters, described below. 
 
 ```php
+<?php
+use Aeon\Calendar\Gregorian\BusinessHours\BusinessDays;
+use Aeon\Calendar\Gregorian\BusinessHours\NonBusinessDays;
+
 final class BusinessHours
 {
     /**
@@ -41,6 +45,9 @@ Working Hours can be dined in linear way but also as a collection of shifts (if 
 * `\Aeon\Calendar\Gregorian\BusinessHours\WorkingHours\ShiftsWorkingHours()`
 
 ```php
+<?php
+use Aeon\Calendar\Gregorian\Time;
+
 interface WorkingHours
 {
     public function openFrom() : Time;
