@@ -35,7 +35,7 @@ final class BusinessHoursTest extends TestCase
             $nonBusinessDays = new NonBusinessDays(
                 new Holidays($regionalHolidays),
                 new NonWorkingPeriod(
-                    DateTime::fromString('2020-01-02')->to(DateTime::fromString('2020-01-10'))
+                    DateTime::fromString('2020-01-02')->until(DateTime::fromString('2020-01-10'))
                 )
             )
         );
