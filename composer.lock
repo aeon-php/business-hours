@@ -12,21 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/aeon-php/calendar.git",
-<<<<<<< Updated upstream
-                "reference": "7e13b569e90dbd9da3a3295054d4aeecf16458b1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/aeon-php/calendar/zipball/7e13b569e90dbd9da3a3295054d4aeecf16458b1",
-                "reference": "7e13b569e90dbd9da3a3295054d4aeecf16458b1",
-=======
                 "reference": "85f9d9833ff01cbd8efd796e95b30b28e8d5fb53"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/aeon-php/calendar/zipball/85f9d9833ff01cbd8efd796e95b30b28e8d5fb53",
                 "reference": "85f9d9833ff01cbd8efd796e95b30b28e8d5fb53",
->>>>>>> Stashed changes
                 "shasum": ""
             },
             "require": {
@@ -67,11 +58,7 @@
                 "immutable",
                 "sleep"
             ],
-<<<<<<< Updated upstream
-            "time": "2020-06-13T05:41:19+00:00"
-=======
             "time": "2020-06-18T08:28:14+00:00"
->>>>>>> Stashed changes
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -202,12 +189,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/aeon-php/calendar-holidays.git",
-                "reference": "c5267a2f8409703e4c9c81699ddbd89c5d14999e"
+                "reference": "a12e2b39390588d705b7328fb7a3d98fe7e15c7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aeon-php/calendar-holidays/zipball/c5267a2f8409703e4c9c81699ddbd89c5d14999e",
-                "reference": "c5267a2f8409703e4c9c81699ddbd89c5d14999e",
+                "url": "https://api.github.com/repos/aeon-php/calendar-holidays/zipball/a12e2b39390588d705b7328fb7a3d98fe7e15c7f",
+                "reference": "a12e2b39390588d705b7328fb7a3d98fe7e15c7f",
                 "shasum": ""
             },
             "require": {
@@ -251,7 +238,7 @@
                 "immutable",
                 "sleep"
             ],
-            "time": "2020-06-13T05:51:37+00:00"
+            "time": "2020-06-18T09:17:24+00:00"
         },
         {
             "name": "amphp/amp",
@@ -4322,18 +4309,6 @@
         },
         {
             "name": "symfony/console",
-<<<<<<< Updated upstream
-            "version": "v5.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/console.git",
-                "reference": "0f0a271bc9b7d02a053d36fcdcb12662e2a8096e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/0f0a271bc9b7d02a053d36fcdcb12662e2a8096e",
-                "reference": "0f0a271bc9b7d02a053d36fcdcb12662e2a8096e",
-=======
             "version": "v5.1.2",
             "source": {
                 "type": "git",
@@ -4344,7 +4319,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/console/zipball/34ac555a3627e324b660e318daa07572e1140123",
                 "reference": "34ac555a3627e324b660e318daa07572e1140123",
->>>>>>> Stashed changes
                 "shasum": ""
             },
             "require": {
@@ -4424,11 +4398,7 @@
                     "type": "tidelift"
                 }
             ],
-<<<<<<< Updated upstream
-            "time": "2020-06-07T19:47:44+00:00"
-=======
             "time": "2020-06-15T12:59:21+00:00"
->>>>>>> Stashed changes
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -4492,11 +4462,7 @@
         },
         {
             "name": "symfony/event-dispatcher",
-<<<<<<< Updated upstream
-            "version": "v5.1.1",
-=======
             "version": "v5.1.2",
->>>>>>> Stashed changes
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
@@ -4654,11 +4620,7 @@
         },
         {
             "name": "symfony/filesystem",
-<<<<<<< Updated upstream
-            "version": "v5.1.1",
-=======
             "version": "v5.1.2",
->>>>>>> Stashed changes
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
@@ -4722,11 +4684,7 @@
         },
         {
             "name": "symfony/finder",
-<<<<<<< Updated upstream
-            "version": "v5.1.1",
-=======
             "version": "v5.1.2",
->>>>>>> Stashed changes
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -4789,11 +4747,7 @@
         },
         {
             "name": "symfony/options-resolver",
-<<<<<<< Updated upstream
-            "version": "v5.1.1",
-=======
             "version": "v5.1.2",
->>>>>>> Stashed changes
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
@@ -5453,11 +5407,7 @@
         },
         {
             "name": "symfony/process",
-<<<<<<< Updated upstream
-            "version": "v5.1.1",
-=======
             "version": "v5.1.2",
->>>>>>> Stashed changes
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
@@ -5593,11 +5543,7 @@
         },
         {
             "name": "symfony/stopwatch",
-<<<<<<< Updated upstream
-            "version": "v5.1.1",
-=======
             "version": "v5.1.2",
->>>>>>> Stashed changes
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stopwatch.git",
@@ -5661,11 +5607,7 @@
         },
         {
             "name": "symfony/string",
-<<<<<<< Updated upstream
-            "version": "v5.1.1",
-=======
             "version": "v5.1.2",
->>>>>>> Stashed changes
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
