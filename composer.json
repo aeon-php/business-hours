@@ -7,8 +7,6 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.4.2",
-        "ext-json": "*",
-        "webmozart/assert": "^1.8",
         "aeon-php/calendar": "1.x-dev"
     },
     "require-dev": {
