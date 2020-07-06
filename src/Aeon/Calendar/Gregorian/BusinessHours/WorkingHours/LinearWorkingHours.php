@@ -5,9 +5,9 @@ declare(strict_types=1);
 
 namespace Aeon\Calendar\Gregorian\BusinessHours\WorkingHours;
 
+use Aeon\Calendar\Exception\InvalidArgumentException;
 use Aeon\Calendar\Gregorian\BusinessHours\WorkingHours;
 use Aeon\Calendar\Gregorian\Time;
-use Webmozart\Assert\Assert;
 
 /**
  * @psalm-immutable
@@ -20,7 +20,10 @@ final class LinearWorkingHours implements WorkingHours
 
     public function __construct(Time $startHour, Time $endHour)
     {
-        Assert::true($endHour->isGreaterThan($startHour), 'End hour needs to be greater than start hour');
+        if (!$endHour->isGreaterThan($startHour)) {
+            throw new InvalidArgumentException('End hour needs to be greater than start hour');
+        }
+
         $this->startHour = $startHour;
         $this->endHour = $endHour;
     }

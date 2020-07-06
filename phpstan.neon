@@ -1,8 +1,5 @@
 parameters:
-    level: 8
+    level: max
     paths:
         - src
         - tests
-
-includes:
-    - vendor/phpstan/phpstan-webmozart-assert/extension.neon

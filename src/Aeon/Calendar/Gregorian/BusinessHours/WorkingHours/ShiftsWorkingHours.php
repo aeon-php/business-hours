@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Aeon\Calendar\Gregorian\BusinessHours\WorkingHours;
 
+use Aeon\Calendar\Exception\InvalidArgumentException;
 use Aeon\Calendar\Gregorian\BusinessHours\WorkingHours;
 use Aeon\Calendar\Gregorian\Time;
-use Webmozart\Assert\Assert;
 
 /**
  * @psalm-immutable
@@ -20,7 +20,9 @@ final class ShiftsWorkingHours implements WorkingHours
 
     public function __construct(LinearWorkingHours ...$workingHours)
     {
-        Assert::greaterThan(\count($workingHours), 0, 'Shifts can\'t be empty');
+        if (\count($workingHours) === 0) {
+            throw new InvalidArgumentException('Shifts can\'t be empty');
+        }
 
         \uasort(
             $workingHours,
