@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 namespace Aeon\Calendar\Tests\Unit\Calendar\Gregorian\BusinessHours\BusinessHours;
 
 use Aeon\Calendar\Gregorian\BusinessHours\BusinessDays;

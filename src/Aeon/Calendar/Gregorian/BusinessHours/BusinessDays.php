@@ -83,6 +83,6 @@ final class BusinessDays
             }
         }
 
-        throw new BusinessDayException($day->format("Y-m-d") . " is not a business day.");
+        throw new BusinessDayException($day->format('Y-m-d') . ' is not a business day.');
     }
 }
