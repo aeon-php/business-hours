@@ -21,9 +21,9 @@ final class BusinessHours
     private NonBusinessDays $nonBusinessDays;
 
     /**
-     * @param BusinessDays    $regularBusinessDays - lowest priority when checking open hours, overwrites nothing
-     * @param BusinessDays    $customBusinessDays  - highest priority when checking open hours, overwrites business days and non business days
-     * @param NonBusinessDays $nonBusinessDays     - medium priority when checking open hours, overwrites regular business days
+     * @param BusinessDays $regularBusinessDays - lowest priority when checking open hours, overwrites nothing
+     * @param BusinessDays $customBusinessDays - highest priority when checking open hours, overwrites business days and non business days
+     * @param NonBusinessDays $nonBusinessDays - medium priority when checking open hours, overwrites regular business days
      */
     public function __construct(BusinessDays $regularBusinessDays, BusinessDays $customBusinessDays, NonBusinessDays $nonBusinessDays)
     {
