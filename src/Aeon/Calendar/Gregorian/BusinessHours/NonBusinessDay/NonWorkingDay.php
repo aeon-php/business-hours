@@ -21,6 +21,6 @@ final class NonWorkingDay implements NonBusinessDay
 
     public function is(Day $day) : bool
     {
-        return $this->day->equals($day);
+        return $this->day->isEqual($day);
     }
 }
