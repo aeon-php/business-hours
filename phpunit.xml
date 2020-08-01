@@ -17,12 +17,10 @@
 
     <testsuites>
         <testsuite name="functional">
-            <directory suffix="">tests/Aeon/**/*/Functional</directory>
-            <directory suffix="*.phpt">tests/Aeon/**/*/Functional</directory>
+            <directory>tests/Aeon/**/*/Functional</directory>
         </testsuite>
         <testsuite name="unit">
-            <directory suffix="">tests/Aeon/**/*/Unit</directory>
-            <directory suffix="*.phpt">tests/tests/**/*/Unit</directory>
+            <directory>tests/Aeon/**/*/Unit</directory>
         </testsuite>
     </testsuites>
 </phpunit>
