@@ -25,7 +25,7 @@ final class RegularBusinessDay implements BusinessDay
 
     public function is(Day $day) : bool
     {
-        return $this->weekDay->equals($day->weekDay());
+        return $this->weekDay->isEqual($day->weekDay());
     }
 
     public function isOpen(DateTime $dateTime) : bool
