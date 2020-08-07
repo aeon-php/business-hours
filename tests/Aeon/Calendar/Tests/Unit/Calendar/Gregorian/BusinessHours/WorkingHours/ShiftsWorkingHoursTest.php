@@ -27,9 +27,12 @@ final class ShiftsWorkingHoursTest extends TestCase
         $shifts = new ShiftsWorkingHours(
             new LinearWorkingHours(Time::fromString('10am'), Time::fromString('9pm')),
             new LinearWorkingHours(Time::fromString('6am'), Time::fromString('8am')),
+            new LinearWorkingHours(Time::fromString('4am'), Time::fromString('5am')),
         );
 
-        $this->assertFalse($shifts->isOpen(Time::fromString('5am')));
+        $this->assertSame('04:00:00.000000', $shifts->openFrom()->toString());
+        $this->assertSame('21:00:00.000000', $shifts->openTo()->toString());
+        $this->assertFalse($shifts->isOpen(Time::fromString('3am')));
         $this->assertTrue($shifts->isOpen(Time::fromString('6am')));
         $this->assertFalse($shifts->isOpen(Time::fromString('9am')));
         $this->assertTrue($shifts->isOpen(Time::fromString('5pm')));
