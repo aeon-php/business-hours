@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7ec7a160a9cdb8c0d3b700b8c23202a5",
+    "content-hash": "68a90c15374df10aac1b58df667e43b4",
     "packages": [
         {
             "name": "aeon-php/calendar",
@@ -62,26 +62,27 @@
     "packages-dev": [
         {
             "name": "aeon-php/calendar-holidays",
-            "version": "1.x-dev",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aeon-php/calendar-holidays.git",
-                "reference": "3ceee6d2e70fd51645da5c7143a65c1a61f8efe4"
+                "reference": "9073cb1aa2e8084a9509b68d7283b8464e4276c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aeon-php/calendar-holidays/zipball/3ceee6d2e70fd51645da5c7143a65c1a61f8efe4",
-                "reference": "3ceee6d2e70fd51645da5c7143a65c1a61f8efe4",
+                "url": "https://api.github.com/repos/aeon-php/calendar-holidays/zipball/9073cb1aa2e8084a9509b68d7283b8464e4276c0",
+                "reference": "9073cb1aa2e8084a9509b68d7283b8464e4276c0",
                 "shasum": ""
             },
             "require": {
                 "aeon-php/calendar": "^0.3.0",
                 "ext-json": "*",
+                "ext-mbstring": "*",
                 "php": ">=7.4.2"
             },
             "require-dev": {
                 "google/apiclient": "^2.0",
-                "phpunit/phpunit": "^9.2"
+                "phpunit/phpunit": "^9.3"
             },
             "type": "library",
             "extra": {
@@ -113,7 +114,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-08-04T20:49:29+00:00"
+            "time": "2020-08-09T09:04:53+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -935,16 +936,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.3.2",
+            "version": "9.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "eacb57f3857cb6706550bd39ea500f9b1097b0bf"
+                "reference": "7e3942a29e7705cf109aa58c6e5d80997796d1dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/eacb57f3857cb6706550bd39ea500f9b1097b0bf",
-                "reference": "eacb57f3857cb6706550bd39ea500f9b1097b0bf",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/7e3942a29e7705cf109aa58c6e5d80997796d1dc",
+                "reference": "7e3942a29e7705cf109aa58c6e5d80997796d1dc",
                 "shasum": ""
             },
             "require": {
@@ -1029,7 +1030,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-08-07T09:12:30+00:00"
+            "time": "2020-08-08T05:12:01+00:00"
         },
         {
             "name": "sebastian/code-unit",
@@ -2109,9 +2110,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "aeon-php/calendar-holidays": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
