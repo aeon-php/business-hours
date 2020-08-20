@@ -79,7 +79,6 @@ final class BusinessHours
             if ($daysChecked >= $maximumDays) {
                 throw new BusinessDayException(\sprintf('Could not find any business days in next %d days', $daysChecked));
             }
-
         }
 
         return $nextDay;
