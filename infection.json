@@ -20,6 +20,7 @@
     "@default": true,
     "OneZeroInteger": {
       "ignore": [
+        "Aeon\\Calendar\\Gregorian\\BusinessHours::nextBusinessDay",
         "Aeon\\Calendar\\Gregorian\\BusinessHours\\WorkingHours\\ShiftsWorkingHours::__construct"
       ]
     },
@@ -29,6 +30,26 @@
       ]
     },
     "LogicalAnd": {
+      "ignore": [
+        "Aeon\\Calendar\\Gregorian\\BusinessHours::nextBusinessDay"
+      ]
+    },
+    "DecrementInteger": {
+      "ignore": [
+        "Aeon\\Calendar\\Gregorian\\BusinessHours::nextBusinessDay"
+      ]
+    },
+    "Assignment": {
+      "ignore": [
+        "Aeon\\Calendar\\Gregorian\\BusinessHours::nextBusinessDay"
+      ]
+    },
+    "PlusEqual": {
+      "ignore": [
+        "Aeon\\Calendar\\Gregorian\\BusinessHours::nextBusinessDay"
+      ]
+    },
+    "Throw_": {
       "ignore": [
         "Aeon\\Calendar\\Gregorian\\BusinessHours::nextBusinessDay"
       ]

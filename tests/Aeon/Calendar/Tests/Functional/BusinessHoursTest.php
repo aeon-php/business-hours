@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Aeon\Calendar\Tests\Functional;
 
+use Aeon\Calendar\Exception\InvalidArgumentException;
 use Aeon\Calendar\Gregorian\BusinessHours;
 use Aeon\Calendar\Gregorian\BusinessHours\BusinessDays;
 use Aeon\Calendar\Gregorian\BusinessHours\BusinssDay\CustomBusinessDay;
@@ -69,6 +70,48 @@ final class BusinessHoursTest extends TestCase
         $this->assertSame(
             '2020-01-07',
             $businessDays->nextBusinessDay(Day::fromString('2020-01-04'))->format('Y-m-d')
+        );
+    }
+
+    public function test_finding_next_working_day_when_business_is_permanently_closed_for_a_year() : void
+    {
+        $this->expectException(BusinessDayException::class);
+        $this->expectExceptionMessage('Could not find any business days in next 365 days');
+
+        $businessDays = new BusinessHours(
+            $businessDays = BusinessDays::none(),
+            $customBusinessDays = new BusinessDays(),
+            $nonBusinessDays = new NonBusinessDays(
+                new NonWorkingPeriod(
+                    DateTime::fromString('2020-01-02')->until(DateTime::fromString('2020-01-07'))
+                )
+            )
+        );
+
+        $this->assertSame(
+            '2020-01-07',
+            $businessDays->nextBusinessDay(Day::fromString('2020-01-04'))->format('Y-m-d')
+        );
+    }
+
+    public function test_finding_next_working_with_invalid_maximum_days() : void
+    {
+        $this->expectException(InvalidArgumentException::class);
+        $this->expectExceptionMessage('Maximum days must be greater or equal 1');
+
+        $businessDays = new BusinessHours(
+            $businessDays = BusinessDays::none(),
+            $customBusinessDays = new BusinessDays(),
+            $nonBusinessDays = new NonBusinessDays(
+                new NonWorkingPeriod(
+                    DateTime::fromString('2020-01-02')->until(DateTime::fromString('2020-01-07'))
+                )
+            )
+        );
+
+        $this->assertSame(
+            '2020-01-07',
+            $businessDays->nextBusinessDay(Day::fromString('2020-01-04'), 0)->format('Y-m-d')
         );
     }
 
