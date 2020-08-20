@@ -49,6 +49,29 @@ final class BusinessHoursTest extends TestCase
         $this->assertTrue($businessDays->isOpenOn(Day::fromString('2020-01-13'))); // true
     }
 
+    public function test_finding_next_working_day() : void
+    {
+        $regionalHolidays = new GoogleCalendarRegionalHolidays(CountryCodes::US);
+
+        $businessDays = new BusinessHours(
+            $businessDays = BusinessDays::mondayFriday(
+                new LinearWorkingHours(Time::fromString('8 am'), Time::fromString('6 pm'))
+            ),
+            $customBusinessDays = new BusinessDays(),
+            $nonBusinessDays = new NonBusinessDays(
+                new Holidays($regionalHolidays),
+                new NonWorkingPeriod(
+                    DateTime::fromString('2020-01-02')->until(DateTime::fromString('2020-01-07'))
+                )
+            )
+        );
+
+        $this->assertSame(
+            '2020-01-07',
+            $businessDays->nextBusinessDay(Day::fromString('2020-01-04'))->format('Y-m-d')
+        );
+    }
+
     public function test_checking_open_hours() : void
     {
         $businessDays = new BusinessHours(

@@ -62,7 +62,11 @@ final class BusinessHours
     {
         $nextDay = $day->next();
 
-        while (!$this->regularBusinessDays->isOpenOn($nextDay) && !$this->customBusinessDays->isOpenOn($nextDay)) {
+        while (
+            $this->nonBusinessDays->is($nextDay) || (!$this->regularBusinessDays->isOpenOn($nextDay)
+                && !$this->customBusinessDays->isOpenOn($nextDay))
+
+        ) {
             $nextDay = $nextDay->next();
         }
 
