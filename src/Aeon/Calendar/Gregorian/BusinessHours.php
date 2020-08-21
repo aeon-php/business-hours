@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Aeon\Calendar\Gregorian;
 
+use Aeon\Calendar\Exception\InvalidArgumentException;
 use Aeon\Calendar\Gregorian\BusinessHours\BusinessDays;
 use Aeon\Calendar\Gregorian\BusinessHours\NonBusinessDays;
 use Aeon\Calendar\Gregorian\BusinessHours\WorkingHours;
@@ -58,12 +59,26 @@ final class BusinessHours
         return $this->regularBusinessDays->isOpenOn($day);
     }
 
-    public function nextBusinessDay(Day $day) : Day
+    public function nextBusinessDay(Day $day, int $maximumDays = 365) : Day
     {
+        if ($maximumDays <= 0) {
+            throw new InvalidArgumentException('Maximum days must be greater or equal 1');
+        }
+
         $nextDay = $day->next();
 
-        while (!$this->regularBusinessDays->isOpenOn($nextDay) && !$this->customBusinessDays->isOpenOn($nextDay)) {
+        $daysChecked = 0;
+
+        while (
+            $this->nonBusinessDays->is($nextDay) || (!$this->regularBusinessDays->isOpenOn($nextDay)
+                && !$this->customBusinessDays->isOpenOn($nextDay))
+        ) {
             $nextDay = $nextDay->next();
+            $daysChecked += 1;
+
+            if ($daysChecked >= $maximumDays) {
+                throw new BusinessDayException(\sprintf('Could not find any business days in next %d days', $daysChecked));
+            }
         }
 
         return $nextDay;
