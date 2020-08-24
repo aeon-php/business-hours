@@ -21,6 +21,9 @@ final class NonBusinessDays
         $this->nonBusinessDays = $nonBusinessDays;
     }
 
+    /**
+     * @psalm-pure
+     */
     public static function none() : self
     {
         return new self();

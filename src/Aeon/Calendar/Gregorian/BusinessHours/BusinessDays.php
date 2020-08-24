@@ -24,11 +24,17 @@ final class BusinessDays
         $this->businessDays = $businessDays;
     }
 
+    /**
+     * @psalm-pure
+     */
     public static function none() : self
     {
         return new self();
     }
 
+    /**
+     * @psalm-pure
+     */
     public static function wholeWeek(WorkingHours $weekWorkingHours, ?WorkingHours $weekendWorkingHours = null) : self
     {
         return new self(
@@ -42,6 +48,9 @@ final class BusinessDays
         );
     }
 
+    /**
+     * @psalm-pure
+     */
     public static function mondayFriday(LinearWorkingHours $workingHours) : self
     {
         return new self(
