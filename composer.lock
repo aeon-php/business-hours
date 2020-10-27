@@ -62,20 +62,20 @@
     "packages-dev": [
         {
             "name": "aeon-php/calendar-holidays",
-            "version": "0.3.0",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aeon-php/calendar-holidays.git",
-                "reference": "9c7fa21be9ea58fe05f4010ed155869300753a7b"
+                "reference": "37910869a2ab22395333b83a5e75eabe7b7c95fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aeon-php/calendar-holidays/zipball/9c7fa21be9ea58fe05f4010ed155869300753a7b",
-                "reference": "9c7fa21be9ea58fe05f4010ed155869300753a7b",
+                "url": "https://api.github.com/repos/aeon-php/calendar-holidays/zipball/37910869a2ab22395333b83a5e75eabe7b7c95fa",
+                "reference": "37910869a2ab22395333b83a5e75eabe7b7c95fa",
                 "shasum": ""
             },
             "require": {
-                "aeon-php/calendar": ">=0.4.0",
+                "aeon-php/calendar": ">=0.11.0",
                 "ext-json": "*",
                 "ext-mbstring": "*",
                 "php": ">=7.4.2"
@@ -114,7 +114,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-10-25T08:42:15+00:00"
+            "time": "2020-10-25T08:55:12+00:00"
         },
         {
             "name": "doctrine/instantiator",
