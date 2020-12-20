@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Aeon\Calendar\Gregorian\BusinessHours\WorkingHours;
+namespace Aeon\Calendar\BusinessHours\WorkingHours;
 
+use Aeon\Calendar\BusinessHours\WorkingHours;
 use Aeon\Calendar\Exception\InvalidArgumentException;
-use Aeon\Calendar\Gregorian\BusinessHours\WorkingHours;
 use Aeon\Calendar\Gregorian\Time;
 
 /**

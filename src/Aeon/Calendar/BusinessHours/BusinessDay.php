@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aeon\Calendar\Gregorian\BusinessHours;
+namespace Aeon\Calendar\BusinessHours;
 
 use Aeon\Calendar\Gregorian\DateTime;
 use Aeon\Calendar\Gregorian\Day;

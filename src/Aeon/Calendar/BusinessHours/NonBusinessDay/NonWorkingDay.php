@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Aeon\Calendar\Gregorian\BusinessHours\NonBusinessDay;
+namespace Aeon\Calendar\BusinessHours\NonBusinessDay;
 
-use Aeon\Calendar\Gregorian\BusinessHours\NonBusinessDay;
+use Aeon\Calendar\BusinessHours\NonBusinessDay;
 use Aeon\Calendar\Gregorian\Day;
 
 /**

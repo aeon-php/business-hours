@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Aeon\Calendar\Gregorian\BusinessHours;
+namespace Aeon\Calendar\BusinessHours;
 
-use Aeon\Calendar\Gregorian\BusinessHours\WorkingHours\LinearWorkingHours;
+use Aeon\Calendar\BusinessHours\Exception\BusinessDayException;
+use Aeon\Calendar\BusinessHours\WorkingHours\LinearWorkingHours;
 use Aeon\Calendar\Gregorian\DateTime;
 use Aeon\Calendar\Gregorian\Day;
-use Aeon\Calendar\Gregorian\Exception\BusinessDayException;
 
 /**
  * @psalm-immutable
