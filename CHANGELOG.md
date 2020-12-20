@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [0.6.0] - 2020-12-20
+### Changed
+- Changed Business Hours namespace, moved phpunit to tools
+
 ## [0.5.0] - 2020-09-04
 ### Changed
 - Updated aeon-php/calendar dependency to >= 0.6.0
