@@ -4,20 +4,21 @@ declare(strict_types=1);
 
 namespace Aeon\Calendar\Tests\Functional;
 
+use Aeon\Calendar\BusinessHours\BusinessDays;
+use Aeon\Calendar\BusinessHours\BusinessHours;
+use Aeon\Calendar\BusinessHours\BusinssDay\CustomBusinessDay;
+use Aeon\Calendar\BusinessHours\Exception\BusinessDayException;
+use Aeon\Calendar\BusinessHours\NonBusinessDay\Holidays;
+use Aeon\Calendar\BusinessHours\NonBusinessDay\NonWorkingDay;
+use Aeon\Calendar\BusinessHours\NonBusinessDay\NonWorkingPeriod;
+use Aeon\Calendar\BusinessHours\NonBusinessDays;
+use Aeon\Calendar\BusinessHours\WorkingHours\LinearWorkingHours;
 use Aeon\Calendar\Exception\InvalidArgumentException;
-use Aeon\Calendar\Gregorian\BusinessHours;
-use Aeon\Calendar\Gregorian\BusinessHours\BusinessDays;
-use Aeon\Calendar\Gregorian\BusinessHours\BusinssDay\CustomBusinessDay;
-use Aeon\Calendar\Gregorian\BusinessHours\NonBusinessDay\Holidays;
-use Aeon\Calendar\Gregorian\BusinessHours\NonBusinessDay\NonWorkingPeriod;
-use Aeon\Calendar\Gregorian\BusinessHours\NonBusinessDays;
-use Aeon\Calendar\Gregorian\BusinessHours\WorkingHours\LinearWorkingHours;
 use Aeon\Calendar\Gregorian\DateTime;
 use Aeon\Calendar\Gregorian\Day;
-use Aeon\Calendar\Gregorian\Exception\BusinessDayException;
-use Aeon\Calendar\Gregorian\Holidays\GoogleCalendar\CountryCodes;
-use Aeon\Calendar\Gregorian\Holidays\GoogleCalendarRegionalHolidays;
 use Aeon\Calendar\Gregorian\Time;
+use Aeon\Calendar\Holidays\GoogleCalendar\CountryCodes;
+use Aeon\Calendar\Holidays\GoogleCalendarRegionalHolidays;
 use PHPUnit\Framework\TestCase;
 
 final class BusinessHoursTest extends TestCase
@@ -145,7 +146,7 @@ final class BusinessHoursTest extends TestCase
                 )
             ),
             new NonBusinessDays(
-                new BusinessHours\NonBusinessDay\NonWorkingDay(
+                new NonWorkingDay(
                     Day::fromString('2020-01-02')
                 )
             ),

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Aeon\Calendar\Tests\Unit\Calendar\Gregorian\BusinessHours\BusinessHours;
+namespace Aeon\Calendar\Tests\Unit\Calendar\BusinessHours\BusinessHours;
 
-use Aeon\Calendar\Gregorian\BusinessHours\RegularBusinessDay;
-use Aeon\Calendar\Gregorian\BusinessHours\WorkingHours\LinearWorkingHours;
+use Aeon\Calendar\BusinessHours\RegularBusinessDay;
+use Aeon\Calendar\BusinessHours\WorkingHours\LinearWorkingHours;
 use Aeon\Calendar\Gregorian\DateTime;
 use Aeon\Calendar\Gregorian\Day\WeekDay;
 use Aeon\Calendar\Gregorian\Time;

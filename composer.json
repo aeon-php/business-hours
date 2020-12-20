@@ -2,16 +2,20 @@
     "name": "aeon-php/business-hours",
     "type": "library",
     "description": "Abstraction allowing to define and check against business hours",
-    "keywords": ["calendar", "immutable", "holidays", "business hours"],
+    "keywords": [
+        "calendar",
+        "immutable",
+        "holidays",
+        "business hours"
+    ],
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
         "php": ">=7.4.2",
-        "aeon-php/calendar": ">=0.6.0"
+        "aeon-php/calendar": ">=0.13.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.3",
-        "aeon-php/calendar-holidays": ">=0.2.0"
+        "aeon-php/calendar-holidays": ">=0.6.0"
     },
     "license": "MIT",
     "autoload": {
@@ -33,7 +37,7 @@
             "@test:mutation"
         ],
         "test": [
-            "phpunit"
+            "tools/phpunit.phar"
         ],
         "test:mutation": [
             "tools/infection --threads=2"

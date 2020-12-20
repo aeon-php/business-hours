@@ -2,35 +2,36 @@
 
 declare(strict_types=1);
 
-namespace Aeon\Calendar\Gregorian\BusinessHours;
+namespace Aeon\Calendar\BusinessHours\BusinssDay;
 
+use Aeon\Calendar\BusinessHours\BusinessDay;
+use Aeon\Calendar\BusinessHours\WorkingHours;
 use Aeon\Calendar\Gregorian\DateTime;
 use Aeon\Calendar\Gregorian\Day;
-use Aeon\Calendar\Gregorian\Day\WeekDay;
 
 /**
  * @psalm-immutable
  */
-final class RegularBusinessDay implements BusinessDay
+final class CustomBusinessDay implements BusinessDay
 {
-    private WeekDay $weekDay;
+    private Day $day;
 
     private WorkingHours $workingHours;
 
-    public function __construct(WeekDay $weekDay, WorkingHours $workingHours)
+    public function __construct(Day $day, WorkingHours $workingHours)
     {
-        $this->weekDay = $weekDay;
+        $this->day = $day;
         $this->workingHours = $workingHours;
     }
 
     public function is(Day $day) : bool
     {
-        return $this->weekDay->isEqual($day->weekDay());
+        return $this->day->isEqual($day);
     }
 
     public function isOpen(DateTime $dateTime) : bool
     {
-        return $this->is($dateTime->day()) && $this->workingHours->isOpen($dateTime->time());
+        return $this->is($dateTime->day()) && $this->workingHours()->isOpen($dateTime->time());
     }
 
     public function workingHours() : WorkingHours

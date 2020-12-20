@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Aeon\Calendar\Tests\Unit\Calendar\Gregorian\BusinessHours\WorkingHours;
+namespace Aeon\Calendar\Tests\Unit\Calendar\BusinessHours\WorkingHours;
 
-use Aeon\Calendar\Gregorian\BusinessHours\WorkingHours\LinearWorkingHours;
+use Aeon\Calendar\BusinessHours\WorkingHours\LinearWorkingHours;
 use Aeon\Calendar\Gregorian\Time;
 use PHPUnit\Framework\TestCase;
 
