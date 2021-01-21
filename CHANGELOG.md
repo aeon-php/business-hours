@@ -1,4 +1,4 @@
-## [Unreleased] - 2021-01-21
+## [0.7.0] - 2021-01-21
 
 ### Added
   - [#37](https://github.com/aeon-php/business-hours/pull/37) - **Integration with Automation** - [@norberttech](https://github.com/norberttech)
