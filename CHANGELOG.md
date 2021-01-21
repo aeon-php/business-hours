@@ -1,8 +1,7 @@
-## [Unreleased] - 2021-01-05
+## [Unreleased] - 2021-01-21
 
-### Changed
-  - [#35](https://github.com/aeon-php/business-hours/pull/35) - **aeon-php/calendar from 0.13.2 to 0.13.3** - [@dependabot[bot]](https://github.com/apps/dependabot)
-  - [#34](https://github.com/aeon-php/business-hours/pull/34) - **aeon-php/calendar from 0.13.0 to 0.13.2** - [@dependabot[bot]](https://github.com/apps/dependabot)
+### Added
+  - [#37](https://github.com/aeon-php/business-hours/pull/37) - **Integration with Automation** - [@norberttech](https://github.com/norberttech)
 
 ## [0.6.0] - 2020-12-20
 
@@ -32,7 +31,7 @@
 
 ### Changed
   - [049279](https://github.com/aeon-php/business-hours/commit/049279e6fb11d410490251a17f3704479232437b) - **Update CHANGELOG.md** - [@norberttech](https://github.com/norberttech)
-  - [#13](https://github.com/aeon-php/business-hours/pull/13) - **aeon-php/calendar dependency to >= 0.6.0** - [@norberttech](https://github.com/norberttech)
+  - [#13](https://github.com/aeon-php/business-hours/pull/13) - **aeon-php/calendar dependency to &gt;= 0.6.0** - [@norberttech](https://github.com/norberttech)
   - [#12](https://github.com/aeon-php/business-hours/pull/12) - **phpunit/phpunit from 9.3.7 to 9.3.8** - [@dependabot[bot]](https://github.com/apps/dependabot)
 
 ## [0.4.0] - 2020-08-24
@@ -48,7 +47,7 @@
 
 ### Changed
   - [b22a8e](https://github.com/aeon-php/business-hours/commit/b22a8ee3df3f586f577ca8c9cf63cff33e3d6d71) - **Update CHANGELOG.md** - [@norberttech](https://github.com/norberttech)
-  - [#10](https://github.com/aeon-php/business-hours/pull/10) - **Fixes regular business day is open & working hours next business day** - [@norberttech](https://github.com/norberttech)
+  - [#10](https://github.com/aeon-php/business-hours/pull/10) - **Fixes regular business day is open &amp; working hours next business day** - [@norberttech](https://github.com/norberttech)
 
 ## [0.2.0] - 2020-08-18
 
@@ -56,7 +55,7 @@
   - [e86a8d](https://github.com/aeon-php/business-hours/commit/e86a8d2b0c7926ad0be6cf60f94c3a5b9eeccd55) - **changelog, updated dependencies** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
-  - [b1ca93](https://github.com/aeon-php/business-hours/commit/b1ca93e4cb611e17879235f7602f346719c3f4b2) - **aeon-php/calendar dependency to >=0.4.0** - [@norberttech](https://github.com/norberttech)
+  - [b1ca93](https://github.com/aeon-php/business-hours/commit/b1ca93e4cb611e17879235f7602f346719c3f4b2) - **aeon-php/calendar dependency to &gt;=0.4.0** - [@norberttech](https://github.com/norberttech)
   - [1a2de1](https://github.com/aeon-php/business-hours/commit/1a2de1c401445aeda660a3b7ed8b7d8967abcf0b) - **dependencies and MSI score** - [@norberttech](https://github.com/norberttech)
   - [273d34](https://github.com/aeon-php/business-hours/commit/273d34e37d4dcd1fb888451affdc854b45102b36) - **Moved tools to phive, updated depndencies, added infection badge** - [@norberttech](https://github.com/norberttech)
 
@@ -80,7 +79,7 @@
   - [3e8928](https://github.com/aeon-php/business-hours/commit/3e89286d150694929e3241f4dfc5973fceef11e4) - **dependencies** - [@norberttech](https://github.com/norberttech)
   - [dace12](https://github.com/aeon-php/business-hours/commit/dace123d3b57e42136a0a2483bd54e70209cdfb4) - **dependencies** - [@norberttech](https://github.com/norberttech)
   - [90f07e](https://github.com/aeon-php/business-hours/commit/90f07e4a8dbd00861afe66adb783bc8fa25070e4) - **dependencies** - [@norberttech](https://github.com/norberttech)
-  - [#3](https://github.com/aeon-php/business-hours/pull/3) - **dependencies & readme** - [@norberttech](https://github.com/norberttech)
+  - [#3](https://github.com/aeon-php/business-hours/pull/3) - **dependencies &amp; readme** - [@norberttech](https://github.com/norberttech)
   - [#2](https://github.com/aeon-php/business-hours/pull/2) - **Introduced WorkingHours interface and added ShiftsWorking Hours** - [@norberttech](https://github.com/norberttech)
   - [#1](https://github.com/aeon-php/business-hours/pull/1) - **Fixes bc break introduced in Calendar** - [@norberttech](https://github.com/norberttech)
   - [801598](https://github.com/aeon-php/business-hours/commit/80159805e43e6de82a9f685144e1aea32624dba1) - **Initial commit** - [@norberttech](https://github.com/norberttech)
