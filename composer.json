@@ -12,7 +12,7 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.4.2",
-        "aeon-php/calendar": ">=0.13.0"
+        "aeon-php/calendar": ">=0.14.0"
     },
     "require-dev": {
         "aeon-php/calendar-holidays": ">=0.6.0"
