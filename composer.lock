@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c5b616641d5d1b74aa525619516cc90d",
+    "content-hash": "25944429ec357e2418b7e4f672365249",
     "packages": [
         {
             "name": "aeon-php/calendar",
@@ -65,20 +65,20 @@
     "packages-dev": [
         {
             "name": "aeon-php/calendar-holidays",
-            "version": "0.6.0",
+            "version": "0.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aeon-php/calendar-holidays.git",
-                "reference": "5294cbabedc8e7f6919682f0191ea6fc8dc21734"
+                "reference": "696c9a80d3eb63e1ba64bbc079ea8ec057d0d0e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aeon-php/calendar-holidays/zipball/5294cbabedc8e7f6919682f0191ea6fc8dc21734",
-                "reference": "5294cbabedc8e7f6919682f0191ea6fc8dc21734",
+                "url": "https://api.github.com/repos/aeon-php/calendar-holidays/zipball/696c9a80d3eb63e1ba64bbc079ea8ec057d0d0e1",
+                "reference": "696c9a80d3eb63e1ba64bbc079ea8ec057d0d0e1",
                 "shasum": ""
             },
             "require": {
-                "aeon-php/calendar": ">=0.13.0",
+                "aeon-php/calendar": ">=0.14.0",
                 "ext-json": "*",
                 "ext-mbstring": "*",
                 "php": ">=7.4.2"
@@ -107,12 +107,11 @@
             "keywords": [
                 "calendar",
                 "holidays",
-                "immutable",
-                "sleep"
+                "immutable"
             ],
             "support": {
                 "issues": "https://github.com/aeon-php/calendar-holidays/issues",
-                "source": "https://github.com/aeon-php/calendar-holidays/tree/0.6.0"
+                "source": "https://github.com/aeon-php/calendar-holidays/tree/0.7.0"
             },
             "funding": [
                 {
@@ -120,7 +119,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-12-20T11:58:19+00:00"
+            "time": "2021-01-25T20:03:39+00:00"
         }
     ],
     "aliases": [],

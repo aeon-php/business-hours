@@ -15,7 +15,7 @@
         "aeon-php/calendar": ">=0.14.0"
     },
     "require-dev": {
-        "aeon-php/calendar-holidays": ">=0.6.0"
+        "aeon-php/calendar-holidays": ">=0.7.0"
     },
     "license": "MIT",
     "autoload": {
