@@ -1,4 +1,4 @@
-## [Unreleased] - 2021-05-03
+## [0.7.1] - 2021-05-03
 
 ### Changed
 - [#47](https://github.com/aeon-php/business-hours/pull/47) - **updated aeon-php/calendar dependency** - [@norberttech](https://github.com/norberttech)
