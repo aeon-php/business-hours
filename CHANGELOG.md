@@ -1,7 +1,11 @@
-## [Unreleased] - 2021-01-25
+## [Unreleased] - 2021-05-03
 
 ### Changed
+- [#47](https://github.com/aeon-php/business-hours/pull/47) - **updated aeon-php/calendar dependency** - [@norberttech](https://github.com/norberttech)
 - [#38](https://github.com/aeon-php/business-hours/pull/38) - **Updated dependencies** - [@norberttech](https://github.com/norberttech)
+
+### Removed
+- [#47](https://github.com/aeon-php/business-hours/pull/47) - **phive in favor of another composer.json just for tools** - [@norberttech](https://github.com/norberttech)
 
 ## [0.7.0] - 2021-01-21
 
