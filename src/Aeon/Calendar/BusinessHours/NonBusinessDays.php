@@ -12,7 +12,7 @@ use Aeon\Calendar\Gregorian\Day;
 final class NonBusinessDays
 {
     /**
-     * @var array<int, NonBusinessDay>
+     * @var array<NonBusinessDay>
      */
     private array $nonBusinessDays;
 

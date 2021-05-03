@@ -15,7 +15,7 @@ use Aeon\Calendar\Gregorian\Day;
 final class BusinessDays
 {
     /**
-     * @var array<int, BusinessDay>
+     * @var array<BusinessDay>
      */
     private array $businessDays;
 
@@ -76,6 +76,9 @@ final class BusinessDays
     public function isOpenOn(Day $day) : bool
     {
         try {
+            /**
+             * @psalm-suppress UnusedMethodCall
+             */
             $this->get($day);
 
             return true;

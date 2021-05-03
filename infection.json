@@ -18,12 +18,6 @@
   },
   "mutators": {
     "@default": true,
-    "OneZeroInteger": {
-      "ignore": [
-        "Aeon\\Calendar\\Gregorian\\BusinessHours::nextBusinessDay",
-        "Aeon\\Calendar\\Gregorian\\BusinessHours\\WorkingHours\\ShiftsWorkingHours::__construct"
-      ]
-    },
     "IncrementInteger": {
       "ignore": [
         "Aeon\\Calendar\\Gregorian\\BusinessHours\\WorkingHours\\ShiftsWorkingHours::__construct"
@@ -57,7 +51,7 @@
   },
   "testFramework": "phpunit",
   "phpUnit": {
-    "customPath": "tools\/phpunit.phar"
+    "customPath": "tools\/vendor\/bin\/phpunit"
   },
   "bootstrap": "./vendor/autoload.php"
 }

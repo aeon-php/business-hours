@@ -22,6 +22,9 @@ final class NonWorkingPeriod implements NonBusinessDay
         $this->timePeriod = $timePeriod;
     }
 
+    /**
+     * @psalm-suppress ImpureMethodCall
+     */
     public function is(Day $day) : bool
     {
         $days = $this->timePeriod
@@ -30,6 +33,6 @@ final class NonWorkingPeriod implements NonBusinessDay
                 return $timePeriod->start()->day()->isEqual($day);
             });
 
-        return (bool) \count($days);
+        return (bool) $days->count();
     }
 }
