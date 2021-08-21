@@ -83,6 +83,17 @@ final class BusinessHours
         return $nextDay;
     }
 
+    public function nextBusinessDays(Day $day, int $businessDays, int $maximumDays = 365) : Day
+    {
+        $nextBusinessDay = $day;
+
+        for ($i = 1; $i <= $businessDays; $i++) {
+            $nextBusinessDay = $this->nextBusinessDay($nextBusinessDay, $maximumDays);
+        }
+
+        return $nextBusinessDay;
+    }
+
     public function workingHours(Day $day) : WorkingHours
     {
         if ($this->customBusinessDays->isOpenOn($day)) {
