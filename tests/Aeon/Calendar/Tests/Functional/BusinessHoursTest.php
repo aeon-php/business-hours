@@ -223,4 +223,34 @@ final class BusinessHoursTest extends TestCase
 
         $this->assertSame(8, $businessDays->workingHours(Day::fromString('2020-01-01'))->openFrom()->hour());
     }
+
+    public function test_finding_next_working_day_after_given_number_of_working_days() : void
+    {
+        $businessDays = new BusinessHours(
+            BusinessDays::wholeWeek(new LinearWorkingHours(Time::fromString('8:00'), Time::fromString('18:00'))),
+            BusinessDays::none(),
+            new NonBusinessDays(
+                new NonWorkingDay(Day::fromString('2021-08-21')),
+                new NonWorkingDay(Day::fromString('2021-08-22')),
+                new NonWorkingDay(Day::fromString('2021-08-24'))
+            )
+        );
+
+        $this->assertSame(
+            '2021-08-20',
+            $businessDays->nextBusinessDays(Day::fromString('2021-08-19'), $days = 1)->format('Y-m-d')
+        );
+        $this->assertSame(
+            '2021-08-23',
+            $businessDays->nextBusinessDays(Day::fromString('2021-08-19'), $days = 2)->format('Y-m-d')
+        );
+        $this->assertSame(
+            '2021-08-25',
+            $businessDays->nextBusinessDays(Day::fromString('2021-08-19'), $days = 3)->format('Y-m-d')
+        );
+        $this->assertSame(
+            '2021-08-27',
+            $businessDays->nextBusinessDays(Day::fromString('2021-08-19'), $days = 5)->format('Y-m-d')
+        );
+    }
 }
