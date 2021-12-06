@@ -1,4 +1,4 @@
-## [Unreleased] - 2021-09-29
+## [0.8.0] - 2021-12-06
 
 ### Changed
 - [2ee524](https://github.com/aeon-php/business-hours/commit/2ee5243de7281afd5bc1f5283972c2c8c87ab262) - **dependencies** - [@norberttech](https://github.com/norberttech)
