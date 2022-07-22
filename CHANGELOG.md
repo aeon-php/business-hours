@@ -1,4 +1,4 @@
-## [Unreleased] - 2022-01-17
+## [Unreleased] - 2022-07-22
 
 ### Changed
 - [16bbfc](https://github.com/aeon-php/business-hours/commit/16bbfc0f3d9a183e9131e7509d0d7cb26f2adc20) - **custom workflows into aeon-php reusable workflows** - [@norberttech](https://github.com/norberttech)
@@ -7,6 +7,7 @@
 - [db6019](https://github.com/aeon-php/business-hours/commit/db6019a9b2c0c30c2d2e355c9410a1044ffe1a77) - **PHP versions scope** - [@norberttech](https://github.com/norberttech)
 
 ### Updated
+- [5f825b](https://github.com/aeon-php/business-hours/commit/5f825b88b3bb1265f67295260cb660bf9be0bf29) - **dependencies** - [@norberttech](https://github.com/norberttech)
 - [5c4e60](https://github.com/aeon-php/business-hours/commit/5c4e6022f1ffe898a347effad1cb5549539eb8d5) - **infection** - [@norberttech](https://github.com/norberttech)
 - [4a656a](https://github.com/aeon-php/business-hours/commit/4a656aa1e76b0c14d69b91e56d3242f4f5032e45) - **dependencies** - [@norberttech](https://github.com/norberttech)
 
