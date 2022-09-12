@@ -27,7 +27,7 @@ final class ShiftsWorkingHours implements WorkingHours
         \uasort(
             $workingHours,
             function (LinearWorkingHours $workingHoursA, LinearWorkingHours $workingHoursB) : int {
-                return $workingHoursA->openFrom()->isLessThanEq($workingHoursB->openFrom())
+                return $workingHoursA->openFrom()->isBeforeOrEqualTo($workingHoursB->openFrom())
                     ? -1
                     : 1;
             }

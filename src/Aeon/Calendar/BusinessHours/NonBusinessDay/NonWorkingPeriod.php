@@ -30,7 +30,7 @@ final class NonWorkingPeriod implements NonBusinessDay
         $days = $this->timePeriod
             ->iterate(TimeUnit::day(), Interval::closed())
             ->filter(function (TimePeriod $timePeriod) use ($day) : bool {
-                return $timePeriod->start()->day()->isEqual($day);
+                return $timePeriod->start()->day()->isEqualTo($day);
             });
 
         return (bool) $days->count();

@@ -26,7 +26,7 @@ final class CustomBusinessDay implements BusinessDay
 
     public function is(Day $day) : bool
     {
-        return $this->day->isEqual($day);
+        return $this->day->isEqualTo($day);
     }
 
     public function isOpen(DateTime $dateTime) : bool

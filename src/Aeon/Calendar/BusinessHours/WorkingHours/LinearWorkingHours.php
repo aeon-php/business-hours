@@ -19,7 +19,7 @@ final class LinearWorkingHours implements WorkingHours
 
     public function __construct(Time $startHour, Time $endHour)
     {
-        if (!$endHour->isGreaterThan($startHour)) {
+        if (!$endHour->isAfter($startHour)) {
             throw new InvalidArgumentException('End hour needs to be greater than start hour');
         }
 
@@ -39,7 +39,7 @@ final class LinearWorkingHours implements WorkingHours
 
     public function isOpen(Time $time) : bool
     {
-        return $time->isGreaterThanEq($this->openFrom()) &&
-            $time->isLessThanEq($this->openTo());
+        return $time->isAfterOrEqualTo($this->openFrom()) &&
+            $time->isBeforeOrEqualTo($this->openTo());
     }
 }
