@@ -1,4 +1,4 @@
-## [Unreleased] - 2022-12-14
+## [Unreleased] - 2022-12-19
 
 ### Updated
 - [621f5f](https://github.com/aeon-php/business-hours/commit/621f5f4dd72f21c27700f11f6e99c1f9f27dc1c2) - **dependabot-auto-merge.yaml** - [@norberttech](https://github.com/norberttech)
