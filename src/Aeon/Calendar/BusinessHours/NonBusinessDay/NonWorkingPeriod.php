@@ -29,6 +29,7 @@ final class NonWorkingPeriod implements NonBusinessDay
     {
         $days = $this->timePeriod
             ->iterate(TimeUnit::day(), Interval::closed())
+            /* @phpstan-ignore-next-line  */
             ->filter(function (TimePeriod $timePeriod) use ($day) : bool {
                 return $timePeriod->start()->day()->isEqualTo($day);
             });
